@@ -12,7 +12,7 @@ end
 
 post('/contact') do
   name = params.fetch('contact_names')
-  Contact.new(name).save()
+  Contact.new({ contact_names: name, contact_phone_numbers: "123-456-7890" }).save()
   @all_contacts = Contact.all_contacts()
   erb(:index)
 end

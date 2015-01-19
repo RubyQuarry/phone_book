@@ -10,6 +10,6 @@
 
 <ul>
   <% @all_contacts.each() do |contact| %>
-    <li><A href="/all_contacts/<% Contact.find() %>"><%= all_contacts.name() %></a></li>
+    <li><A href="/all_contacts/<%= contact.id %>"><%= contact.contact_names %></a> <%= contact.contact_phone_numbers %> </li>
   <% end %>
 </ul>
